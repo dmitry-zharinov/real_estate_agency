@@ -52,7 +52,14 @@ class Flat(models.Model):
         default=None,
         null=True,
         db_index=True)
-    
+    liked_by = models.ManyToManyField(
+        User,
+        related_name='liked_flats',
+        verbose_name='Кто лайкнул',
+        default=None,
+        blank=True,
+        null=True)
+
     def __str__(self):
         return f'{self.town}, {self.address} ({self.price}р.)'
 
