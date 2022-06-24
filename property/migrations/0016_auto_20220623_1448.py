@@ -12,8 +12,6 @@ def fill_owners_flats(apps, schema_editor):
             owner=flat.owner,
             owners_phonenumber=flat.owners_phonenumber,
             owner_pure_phone=flat.owner_pure_phone)
-        # print(owner.owner_flats)
-        # print(flat.id)
         owner.owner_flats.set([flat.id])
 
 
