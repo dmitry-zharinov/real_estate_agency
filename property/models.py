@@ -100,7 +100,7 @@ class Complaint(models.Model):
         verbose_name='Кто жаловался',
         on_delete=models.CASCADE,
         null=True)
-    complaint_flat = models.ForeignKey(
+    flat = models.ForeignKey(
         Flat,
         related_name='flats',
         verbose_name='Квартира, на которую жаловались',
@@ -110,4 +110,4 @@ class Complaint(models.Model):
         'Текст жалобы')
 
     def __str__(self):
-        return f'Жалоба {self.user} на квартиру {self.complaint_flat}'
+        return f'Жалоба {self.user} на квартиру {self.flat}'
