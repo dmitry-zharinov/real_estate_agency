@@ -106,7 +106,7 @@ class Complaint(models.Model):
         verbose_name='Квартира, на которую жаловались',
         null=True,
         on_delete=models.SET_NULL)
-    complaint_text = models.TextField(
+    text = models.TextField(
         'Текст жалобы')
 
     def __str__(self):
